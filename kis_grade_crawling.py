@@ -3,6 +3,10 @@
 신평사의 신용등급 crawling
 """
 
+# 상태비교를 할 때는 객체로 즉, 참조로 비교하자.
+# 값은 대체할 수 있지만 상태는 대체할 수 없다.
+
+
 import codecs
 from bs4 import BeautifulSoup
 
@@ -15,6 +19,10 @@ def get_html_by_file(filename):
     with codecs.open(filename, 'r', 'utf-8') as filep:
         html = filep.read()
     return html
+    # return을 함수로 하면 지연평가를 할 수 있다.
+    # 그리고 다양한 활동을 할 수 있다.
+
+
 
 
 def get_org_list(html, tag_set):
