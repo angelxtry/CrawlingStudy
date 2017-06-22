@@ -18,7 +18,8 @@ soup = BeautifulSoup(html, 'html.parser')
 tag_list = soup.select('.sh_blog_title')
 
 print(response.request.url)
-print(html.encode('cp949', 'ignore'))
+print(html)
+# print(html.encode('cp949', 'ignore'))
 
 for tag in tag_list:
     print(tag)
